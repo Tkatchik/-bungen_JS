@@ -2,11 +2,11 @@
 
 /* 
 
-let lang = ('ru', 'en');
-if (lang == 'ru') {
-    let wD = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+let lang = ('ru');
+if (lang === 'ru') {
+    wD = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 }
-if (lang == 'en') {
+if (lang === 'en') {
     wD = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
 }
 console.log(wD);
@@ -18,7 +18,7 @@ console.log(wD);
 
 /*
 
-let lang = ('ru', 'en');
+let lang = ('ru');
 switch (lang) {
     case 'ru':
         weekDay = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
@@ -35,7 +35,7 @@ console.log(weekDay);
 
 /*
 
-let lang = ('ru', 'en');
+let lang = ('ru');
 weekDay = {
     'ru': ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
     'en': ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
@@ -52,24 +52,10 @@ console.log(weekDay[lang]);
 с любым другим значением вывести в консоль “студент”
 */
 
-let директор,
-    преподаватель,
-    студент;
+let namePerson = prompt('Ваше имя?');
 
-let Артем = 'директор',
-    Максим = 'преподаватель',
-    Энибади = 'студент';
+let status = (namePerson == 'Артем') ? 'директор' :
+    (namePerson == 'Максим') ? 'преподаватель' :
+    'студент';
 
-
-/* 
-let namePerson = директор ? Максим : Артем
-console.log(namePerson); 
-*/
-
-/* 
-let namePerson = преподаватель ? Артем : Максим
-console.log(namePerson);
-*/
-
-let namePerson = студент ? Максим : Энибади
-console.log(namePerson);
+console.log(status);
